@@ -6,16 +6,36 @@
     <title>Gran Idea Games</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Source Code Pro", Semibold;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #dbdbdb; /* Fondo gris */
             margin: 0;
             padding: 20px;
+        }
+        .header {
+            background-color: black; /* Fondo negro detrás del título */
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .header span.white {
+            color: white;
+        }
+        .header span.gray {
+            color: #c6c6c6;
+        }
+        .games-text {
+            text-align: center;
+            font-size: 20px;
+            margin: 64px 0;
         }
         .container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 96px;
         }
         .button {
             display: flex;
@@ -25,34 +45,37 @@
             color: #333;
         }
         .button img {
-            width: 200px; /* Ajusta el tamaño de la imagen */
+            width: 374px; /* Ajusta el tamaño de la imagen */
             height: auto;
-            border-radius: 10px;
+            border-radius: 64px;
             transition: transform 0.2s;
         }
         .button img:hover {
             transform: scale(1.1);
         }
         .text {
-            margin-top: 10px;
-            font-size: 16px;
+            margin-top: 32px;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Gran Idea Games</h1>
-    <p>My games:</p>
+    <div class="header">
+        <h1><span class="white">Gran Idea</span> <span class="gray">Games</span></h1>
+    </div>
+
+    <p class="games-text"></p>
 
     <div class="container">
         <a href="stellar_serenity/index.html" class="button">
             <img src="index_stellar_serenity.jpg" alt="Stellar Serenity">
-            <div class="text">Stellar Serenity (2003)</div>
+            <div class="text">Stellar Serenity (2023)</div>
         </a>
         
         <a href="fierro/index.html" class="button">
             <img src="index_fierro.jpg" alt="El Gaucho Martín Fierro">
-            <div class="text">El gaucho Martín Fierro (2005)</div>
+            <div class="text">El gaucho Martín Fierro (2025)</div>
         </a>
     </div>
 
