@@ -1,84 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gran Idea Games</title>
-    <link rel="icon" type="image/png" href="GranIdeaGames_Logo_Icon.png">
-    <style>
-        body {
-            font-family: "Source Code Pro", Semibold;
-            text-align: center;
-            background-color: #dbdbdb; /* Fondo gris */
-            margin: 0;
-            padding: 20px;
-        }
-        .header {
-            background-color: black; /* Fondo negro detrás del título */
-            padding: 20px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-            font-weight: bold;
-        }
-        .header span.white {
-            color: white;
-        }
-        .header span.gray {
-            color: #c6c6c6;
-        }
-        .games-text {
-            text-align: center;
-            font-size: 20px;
-            margin: 64px 0;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 96px;
-        }
-        .button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: #333;
-        }
-        .button img {
-            width: 374px; /* Ajusta el tamaño de la imagen */
-            height: auto;
-            border-radius: 64px;
-            transition: transform 0.2s;
-        }
-        .button img:hover {
-            transform: scale(1.1);
-        }
-        .text {
-            margin-top: 32px;
-            font-size: 24px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gran Idea Games</title>
+  <!-- Font Awesome (CDN público) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Source Code Pro", Semibold;
+      text-align: center;
+      background-color: #dbdbdb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: black;
+      padding: 20px 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 6vw;
+      font-weight: bold;
+    }
+
+    .header span.white {
+      color: white;
+    }
+
+    .header span.gray {
+      color: #c6c6c6;
+    }
+
+    .games-text {
+      text-align: center;
+      font-size: 20px;
+      margin: 64px 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6vw;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      max-width: 90vw;
+    }
+
+    .button img {
+      width: clamp(200px, 40vw, 374px);
+      height: auto;
+      border-radius: 64px;
+      transition: transform 0.2s;
+    }
+
+    .button img:hover {
+      transform: scale(1.1);
+    }
+
+    .text {
+      margin-top: 32px;
+      font-size: clamp(16px, 2vw, 24px);
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding: 20px;
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer a {
+      color: white;
+      background-color: #444;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.2s;
+    }
+
+    .footer a:hover {
+      background-color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 8vw;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .footer {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer a {
+        width: 80%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1><span class="white">Gran Idea</span> <span class="gray">Games</span></h1>
-    </div>
+  <div class="header">
+    <h1><span class="white">Gran Idea</span> <span class="gray">Games</span></h1>
+  </div>
 
-    <p class="games-text"></p>
+  <p class="games-text"></p>
 
-    <div class="container">
-        <a href="stellar_serenity/index.html" class="button">
-            <img src="index_stellar_serenity.jpg" alt="Stellar Serenity">
-            <div class="text">Stellar Serenity (2023)</div>
-        </a>
-        
-        <a href="fierro/index.html" class="button">
-            <img src="index_fierro.jpg" alt="El Gaucho Martín Fierro">
-            <div class="text">El gaucho Martín Fierro (2025)</div>
-        </a>
-    </div>
+  <div class="container">
+    <a href="stellar_serenity/index.html" class="button">
+      <img src="index_stellar_serenity.jpg" alt="Stellar Serenity" />
+      <div class="text">Stellar Serenity (2023)</div>
+    </a>
+
+    <a href="fierro/index.html" class="button">
+      <img src="index_fierro.jpg" alt="El Gaucho Martín Fierro" />
+      <div class="text">El gaucho Martín Fierro (2025)</div>
+    </a>
+  </div>
+
+  <div class="footer">
+    <a href="mailto:granideagames@gmail.com" target="_blank" rel="noopener">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+    <a href="https://x.com/GranIdeaGames" target="_blank" rel="noopener">
+      <i class="fab fa-x-twitter"></i> Twitter
+    </a>
+    <a href="https://www.youtube.com/@GranIdeaGames" target="_blank" rel="noopener">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="https://www.cgtrader.com/designers/granideagames" target="_blank" rel="noopener">
+      <i class="fas fa-store"></i> CGTrader
+    </a>
+  </div>
 
 </body>
 </html>
